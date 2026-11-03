@@ -15,19 +15,24 @@ export async function onRequestGet({ request, env }) {
   if (!code || code.length > 512) return failure('Missing authorization code.', 400, true);
   let token;
   let stage = 'exchange';
-  let exchangeError = '';
+  let exchangeError = 'request_failed';
+  let exchangeStatus = 'no-response';
   try {
     const response = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
-      headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'BrightLink-Decap-OAuth' },
       body: new URLSearchParams({ client_id: env.GITHUB_CLIENT_ID, client_secret: env.GITHUB_CLIENT_SECRET,
         code, redirect_uri: config.callback, code_verifier: session.verifier }),
       signal: AbortSignal.timeout(15000),
     });
+    exchangeStatus = String(response.status);
+    exchangeError = 'invalid_response';
     const payload = await response.json();
+    exchangeError = 'missing_access_token';
     token = payload.access_token;
     if (!response.ok || !token || payload.error) {
-      exchangeError = typeof payload.error === 'string' ? payload.error : '';
+      const recognized = ['incorrect_client_credentials', 'redirect_uri_mismatch', 'bad_verification_code', 'unverified_user_email', 'bad_code_verifier', 'code_verifier_mismatch', 'application_suspended'];
+      if (payload.error) exchangeError = recognized.includes(payload.error) ? payload.error : 'other_github_error';
       throw new Error('Token exchange failed.');
     }
     stage = 'profile';
@@ -45,7 +50,10 @@ export async function onRequestGet({ request, env }) {
     if (!repoResponse.ok || !(await repoResponse.json()).permissions?.push) throw new Error('Repository write permission required.');
     stage = 'handoff';
     return popup(config.origin, token);
-  } catch {
+  } catch (error) {
+    if (stage === 'exchange' && exchangeStatus === 'no-response') {
+      exchangeError = error?.name === 'TimeoutError' || error?.name === 'AbortError' ? 'request_timeout' : 'request_failed';
+    }
     // Do not log authorization codes, credentials, token responses, or access tokens.
     // Revoke a newly issued token that cannot be delivered to an authorized editor.
     if (token) {
@@ -61,6 +69,9 @@ export async function onRequestGet({ request, env }) {
     const exchangeMessages = {
       incorrect_client_credentials: 'GitHub rejected the OAuth Client ID/Secret pair. Match both values to the same BrightLink OAuth App, save Cloudflare secrets, and redeploy.',
       redirect_uri_mismatch: 'GitHub rejected the callback URL. Match the OAuth App Redirect URI to SITE_ORIGIN plus /api/callback.',
+      unverified_user_email: 'Verify the email address on the GitHub account used to sign in.',
+      bad_code_verifier: 'GitHub rejected the PKCE verification. Close all login windows and start a fresh login from /admin/.',
+      code_verifier_mismatch: 'GitHub rejected the PKCE verification. Close all login windows and start a fresh login from /admin/.',
       bad_verification_code: 'GitHub says this login code expired or was already used. Close the popup and begin a new login from the editor; do not refresh the callback page.',
     };
     const messages = {
@@ -70,6 +81,6 @@ export async function onRequestGet({ request, env }) {
       repository: 'GitHub could not confirm write access to GITHUB_REPO. Check its owner/name, repository visibility versus scope, and the signed-in account’s write permission.',
       handoff: 'GitHub checks passed, but the editor handoff could not be created. Retry a fresh login.',
     };
-    return failure('BrightLink sign-in failed [' + stage + ']. ' + messages[stage], 403, true);
+    return failure('BrightLink sign-in failed [' + stage + (stage === 'exchange' ? '; HTTP ' + exchangeStatus + '; ' + exchangeError : '') + ']. ' + messages[stage], 403, true);
   }
 }
