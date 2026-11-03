@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "groups": [
+    {
+      "id": "services",
+      "eyebrow": "What we can help with",
+      "heading": "Small upgrades.\nA better everyday.",
+      "description": "Practical help with the technology, connections and finishing touches that make a home work.",
+      "visible": true,
+      "items": [
+        {
+          "id": "services-tv",
+          "title": "TV mounting",
+          "description": "Secure TV installation, including Samsung Frame TVs, soundbar mounting and cable management for a clean finish.",
+          "icon": "tv",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "services-home",
+          "title": "Smart home setup",
+          "description": "Video doorbells, smart locks, thermostats, lighting and connected devices, set up to work with your daily routine.",
+          "icon": "home",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "services-wifi",
+          "title": "Wi-Fi & networking",
+          "description": "Mesh Wi-Fi, access points, Ethernet cabling and wireless bridges to connect more of your home and property.",
+          "icon": "wifi",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "services-camera",
+          "title": "Security cameras",
+          "description": "PoE cameras, NVR systems and camera positioning, with help configuring recording and remote viewing.",
+          "icon": "camera",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "services-audio",
+          "title": "Home audio",
+          "description": "Sonos systems, in-ceiling and outdoor speakers, soundbars and audio wiring for the spaces you enjoy.",
+          "icon": "audio",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "services-tools",
+          "title": "Handyman services",
+          "description": "Furniture assembly, mounting, home repairs, minor electrical and plumbing. Practical help for your to-do list.",
+          "icon": "tools",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "See handyman services ↗",
+          "link_target": "handyman"
+        }
+      ]
+    },
+    {
+      "id": "handyman",
+      "eyebrow": "Handyman services",
+      "heading": "Your to-do list.\nTaken care of.",
+      "description": "From assembling furniture to replacing a fixture, get help with the everyday jobs that keep your home comfortable and working well.",
+      "visible": true,
+      "items": [
+        {
+          "id": "handyman-shelf",
+          "title": "Furniture assembly & mounting",
+          "description": "Assembly of IKEA and other flat-pack furniture, plus secure mounting of shelves, mirrors, artwork and other wall decor.",
+          "icon": "shelf",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "handyman-window",
+          "title": "Blinds, curtains & screens",
+          "description": "Installation of window blinds, curtain rods and other window treatments, plus window-screen repairs.",
+          "icon": "window",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "handyman-door",
+          "title": "Door hardware & smart locks",
+          "description": "Installation of door handles, locksets, deadbolts and smart door locks, with setup for connected models.",
+          "icon": "door",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "handyman-paint",
+          "title": "Drywall repair & painting",
+          "description": "Drywall patching, light wall repairs, interior touch-up painting and painting to refresh your space.",
+          "icon": "paint",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "handyman-outlet",
+          "title": "Minor electrical work",
+          "description": "Outlet and receptacle replacement, additional outlets, light-fixture and ceiling-fan replacement, and doorbell transformer installation.",
+          "icon": "outlet",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "handyman-faucet",
+          "title": "Minor plumbing & drains",
+          "description": "Drain snaking and clog clearing, plus kitchen, bathroom and shower fixture replacements, including faucets, showerheads, sinks and toilets.",
+          "icon": "faucet",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        }
+      ]
+    }
+  ]
+}

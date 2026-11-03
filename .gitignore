@@ -1,0 +1,11 @@
+node_modules/
+.dev.vars
+.env
+.env.*
+!.env.example
+.wrangler/
+dist/
+*.log
+.DS_Store
+
+.openai/

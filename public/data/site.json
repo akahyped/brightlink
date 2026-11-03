@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "seo": {
+    "title": "BrightLink Cleveland | Smart Home & Handyman Services",
+    "description": "TV mounting, smart home setup and handyman services in Cleveland. Furniture assembly, drywall, painting, window treatments, minor electrical and plumbing. Call 440-719-9436.",
+    "language": "en",
+    "canonical_url": "",
+    "social_image": ""
+  },
+  "brand": {
+    "name": "brightlink",
+    "dot": ".",
+    "subtitle": "CLEVELAND"
+  },
+  "navigation": [
+    {
+      "label": "Our services",
+      "target": "services"
+    },
+    {
+      "label": "Handyman services",
+      "target": "handyman"
+    },
+    {
+      "label": "The approach",
+      "target": "approach"
+    }
+  ],
+  "header_button": {
+    "label": "Contact us ↗",
+    "target": "contact"
+  },
+  "hero": {
+    "eyebrow": "Cleveland area · Smart home & handyman services",
+    "heading_lines": [
+      {
+        "text": "Your home.",
+        "emphasized_text": ""
+      },
+      {
+        "text": "Better ",
+        "emphasized_text": "connected."
+      }
+    ],
+    "description": "From a perfectly placed TV to Wi-Fi that reaches the backyard. Thoughtful installation and practical handyman help for the way you live.",
+    "primary_label": "Explore our services ↗",
+    "primary_target": "services",
+    "secondary_label": "Have a project in mind?",
+    "secondary_target": "contact",
+    "photo": "",
+    "photo_alt": "",
+    "illustration_label": "Illustration of a wall-mounted television above a walnut console in a warm, modern living room",
+    "image_tag": "DESIGNED TO FIT YOUR SPACE",
+    "image_caption": "Less clutter. More connection. · Illustration"
+  },
+  "service_strip": [
+    {
+      "text": "TV MOUNTING"
+    },
+    {
+      "text": "SMART HOME"
+    },
+    {
+      "text": "WI-FI & NETWORKING"
+    },
+    {
+      "text": "CAMERAS & AUDIO"
+    },
+    {
+      "text": "HANDYMAN SERVICES"
+    }
+  ],
+  "approach": {
+    "eyebrow": "A straightforward approach",
+    "heading": "From idea to installed.",
+    "steps": [
+      {
+        "heading": "01. Tell us the plan",
+        "description": "Share what you want to install or repair, where it will go and what equipment or materials you already have."
+      },
+      {
+        "heading": "02. Work through the details",
+        "description": "Discuss placement, wiring, mounting surfaces and any materials needed before the work begins."
+      },
+      {
+        "heading": "03. Make it work for you",
+        "description": "Installation, setup and a walkthrough so you feel comfortable using your equipment and enjoying your space."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact BrightLink Cleveland",
+    "heading": "What’s next\nfor your home?",
+    "description": "A single installation or a whole to-do list—call, text or email with the details of what you need.",
+    "details_intro": "A few details about your space help us understand the work and plan the next steps:",
+    "checklist": [
+      {
+        "text": "Equipment, furniture or fixture details"
+      },
+      {
+        "text": "Room location, wall surface or repair details"
+      },
+      {
+        "text": "Photos of the space and nearby connections"
+      },
+      {
+        "text": "Your preferred timing"
+      }
+    ],
+    "service_area_note": "Serving the Cleveland area. Availability and project scope are confirmed individually.",
+    "card_eyebrow": "Let’s get started",
+    "card_heading": "Tell us about your project.",
+    "card_description": "Need a TV mounted, furniture assembled or help connecting your home? Get in touch with Thomas at BrightLink.",
+    "phone_display": "440-719-9436",
+    "phone_number": "+14407199436",
+    "phone_note": "Call or text to discuss your project.",
+    "call_label": "Call Thomas ↗",
+    "text_label": "Send a text ↗",
+    "email": "brightlinkcle@gmail.com",
+    "email_heading": "Send your project breakdown",
+    "email_description": "Include the work you need, your location and preferred timing. Attach photos to your email to help explain the space.",
+    "email_button_label": "Email your project details ↗",
+    "email_subject": "BrightLink Project Inquiry",
+    "email_outline": "Hi Thomas,\n\nI’d like help with the following project.\n\nName: \nPhone number: \nCity or neighborhood: \n\nServices needed: \n\nProject description: \n\nEquipment, furniture or fixture details: \n\nPreferred timing: \n",
+    "email_note": "Opens your email app with a project outline ready to complete."
+  },
+  "form": {
+    "enabled": true,
+    "heading": "Or use this contact form",
+    "description": "Send your project details right here—no email app needed.",
+    "name_label": "Name",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "location_label": "City or neighborhood",
+    "service_label": "Services needed",
+    "service_placeholder": "Choose a service",
+    "timing_label": "Preferred timing",
+    "details_label": "Project description",
+    "details_placeholder": "Tell us what you need help with, and include equipment or fixture details.",
+    "submit_label": "Send project inquiry",
+    "sending_label": "Sending…",
+    "success_message": "Thanks for contacting BrightLink! Your inquiry has been accepted for delivery. Thomas will be in touch.",
+    "error_message": "Your inquiry could not be sent. Please try again, call or email us.",
+    "not_configured_message": "Online inquiries are not available yet. Please call, text or email us.",
+    "privacy_note": "Your contact details and project description will be used to respond to your inquiry.",
+    "turnstile_site_key": ""
+  },
+  "footer": {
+    "brand": "brightlink.",
+    "description": "Cleveland, Ohio · Smart home & handyman services",
+    "top_label": "Back to top ↑"
+  },
+  "ui": {
+    "navigation_label": "BrightLink navigation",
+    "skip_label": "Skip to services",
+    "service_options_label": "Service categories",
+    "required_note": "Required fields are marked with an asterisk.",
+    "loading": "Loading BrightLink…",
+    "load_error": "We couldn’t load the latest content. Please refresh this page.",
+    "retry_label": "Try again"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "eyebrow",
+          "heading",
+          "visible"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "eyebrow": {
+            "type": "string"
+          },
+          "heading": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "title",
+                "icon",
+                "visible",
+                "link_target"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string",
+                  "enum": [
+                    "tv",
+                    "home",
+                    "wifi",
+                    "camera",
+                    "audio",
+                    "tools",
+                    "shelf",
+                    "window",
+                    "door",
+                    "paint",
+                    "outlet",
+                    "faucet"
+                  ]
+                },
+                "visible": {
+                  "type": "boolean"
+                },
+                "photo": {
+                  "type": "string"
+                },
+                "photo_alt": {
+                  "type": "string"
+                },
+                "link_label": {
+                  "type": "string"
+                },
+                "link_target": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

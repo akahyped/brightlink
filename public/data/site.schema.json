@@ -1,0 +1,450 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "seo",
+    "brand",
+    "header_button",
+    "hero",
+    "approach",
+    "contact",
+    "form",
+    "footer",
+    "ui"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "seo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "language"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "canonical_url": {
+          "type": "string"
+        },
+        "social_image": {
+          "type": "string"
+        }
+      }
+    },
+    "brand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "dot",
+        "subtitle"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "dot": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        }
+      }
+    },
+    "navigation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "target"
+        ],
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "header_button": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "target"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eyebrow",
+        "primary_label",
+        "primary_target",
+        "secondary_label",
+        "secondary_target",
+        "illustration_label"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string"
+        },
+        "heading_lines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "emphasized_text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "primary_label": {
+          "type": "string"
+        },
+        "primary_target": {
+          "type": "string"
+        },
+        "secondary_label": {
+          "type": "string"
+        },
+        "secondary_target": {
+          "type": "string"
+        },
+        "photo": {
+          "type": "string"
+        },
+        "photo_alt": {
+          "type": "string"
+        },
+        "illustration_label": {
+          "type": "string"
+        },
+        "image_tag": {
+          "type": "string"
+        },
+        "image_caption": {
+          "type": "string"
+        }
+      }
+    },
+    "service_strip": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "approach": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eyebrow",
+        "heading"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "heading"
+            ],
+            "properties": {
+              "heading": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eyebrow",
+        "heading",
+        "details_intro",
+        "card_eyebrow",
+        "card_heading",
+        "card_description",
+        "phone_display",
+        "phone_number",
+        "call_label",
+        "text_label",
+        "email",
+        "email_heading",
+        "email_description",
+        "email_button_label"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "details_intro": {
+          "type": "string"
+        },
+        "checklist": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "service_area_note": {
+          "type": "string"
+        },
+        "card_eyebrow": {
+          "type": "string"
+        },
+        "card_heading": {
+          "type": "string"
+        },
+        "card_description": {
+          "type": "string"
+        },
+        "phone_display": {
+          "type": "string"
+        },
+        "phone_number": {
+          "type": "string"
+        },
+        "phone_note": {
+          "type": "string"
+        },
+        "call_label": {
+          "type": "string"
+        },
+        "text_label": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "email_heading": {
+          "type": "string"
+        },
+        "email_description": {
+          "type": "string"
+        },
+        "email_button_label": {
+          "type": "string"
+        },
+        "email_subject": {
+          "type": "string"
+        },
+        "email_outline": {
+          "type": "string"
+        },
+        "email_note": {
+          "type": "string"
+        }
+      }
+    },
+    "form": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "heading",
+        "name_label",
+        "email_label",
+        "phone_label",
+        "location_label",
+        "service_label",
+        "service_placeholder",
+        "timing_label",
+        "details_label",
+        "details_placeholder",
+        "submit_label",
+        "sending_label",
+        "success_message",
+        "error_message",
+        "not_configured_message",
+        "privacy_note"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name_label": {
+          "type": "string"
+        },
+        "email_label": {
+          "type": "string"
+        },
+        "phone_label": {
+          "type": "string"
+        },
+        "location_label": {
+          "type": "string"
+        },
+        "service_label": {
+          "type": "string"
+        },
+        "service_placeholder": {
+          "type": "string"
+        },
+        "timing_label": {
+          "type": "string"
+        },
+        "details_label": {
+          "type": "string"
+        },
+        "details_placeholder": {
+          "type": "string"
+        },
+        "submit_label": {
+          "type": "string"
+        },
+        "sending_label": {
+          "type": "string"
+        },
+        "success_message": {
+          "type": "string"
+        },
+        "error_message": {
+          "type": "string"
+        },
+        "not_configured_message": {
+          "type": "string"
+        },
+        "privacy_note": {
+          "type": "string"
+        },
+        "turnstile_site_key": {
+          "type": "string"
+        }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "brand",
+        "top_label"
+      ],
+      "properties": {
+        "brand": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "top_label": {
+          "type": "string"
+        }
+      }
+    },
+    "ui": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "navigation_label",
+        "skip_label",
+        "service_options_label",
+        "required_note",
+        "loading",
+        "load_error",
+        "retry_label"
+      ],
+      "properties": {
+        "navigation_label": {
+          "type": "string"
+        },
+        "skip_label": {
+          "type": "string"
+        },
+        "service_options_label": {
+          "type": "string"
+        },
+        "required_note": {
+          "type": "string"
+        },
+        "loading": {
+          "type": "string"
+        },
+        "load_error": {
+          "type": "string"
+        },
+        "retry_label": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

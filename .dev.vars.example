@@ -1,0 +1,14 @@
+# Copy to .dev.vars only for local development. Never commit real values.
+SITE_ORIGIN=https://YOUR-BRIGHTLINK-PROJECT.pages.dev
+GITHUB_REPO=OWNER/BRIGHTLINK-REPOSITORY
+GITHUB_SCOPE=public_repo
+GITHUB_CLIENT_ID=replace-me
+GITHUB_CLIENT_SECRET=replace-me
+OAUTH_COOKIE_SECRET=replace-with-at-least-32-random-characters
+ALLOWED_GITHUB_USERS=YOUR-GITHUB-USERNAME
+# Optional on-site form delivery:
+RESEND_API_KEY=replace-me
+CONTACT_FROM=BrightLink <website@YOUR-VERIFIED-DOMAIN>
+CONTACT_TO=brightlinkcle@gmail.com
+TURNSTILE_SECRET_KEY=replace-me
+CONTACT_ALLOWED_ORIGINS=https://YOUR-BRIGHTLINK-PROJECT.pages.dev
