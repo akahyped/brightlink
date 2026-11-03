@@ -1,13 +1,13 @@
 # Configure the BrightLink repository and production auth origin before login.
 backend:
   name: github
-  repo: OWNER/BRIGHTLINK-REPOSITORY
+  repo: akahyped/brightlink
   branch: main
-  base_url: https://YOUR-BRIGHTLINK-PROJECT.pages.dev
+  base_url: https://brightlink.pages.dev/
   auth_endpoint: api/auth
   auth_scope: public_repo
-site_url: https://YOUR-BRIGHTLINK-PROJECT.pages.dev
-display_url: https://YOUR-BRIGHTLINK-PROJECT.pages.dev
+site_url: https://brightlink.pages.dev/
+display_url: https://brightlink.pages.dev/
 media_folder: public/uploads
 public_folder: /uploads
 publish_mode: simple
