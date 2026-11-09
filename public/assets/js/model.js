@@ -65,8 +65,9 @@ export function validateSite(input, schema) {
   return site;
 }
 export function validateAnchors(site, services) {
-  const anchors = new Set(['home','approach','contact',...services.groups.map(group => group.id)]);
-  for (const target of [...site.navigation.map(link=>link.target),site.header_button.target,site.hero.primary_target,site.hero.secondary_target,...services.groups.flatMap(group=>group.items.filter(item=>item.link_label).map(item=>item.link_target))]) {
+  const anchors = new Set(['home','approach','contact','service-options',...services.groups.map(group => group.id)]);
+  for (const target of [...site.navigation.map(link=>link.target),...(site.experience?.categories||[]).map(item=>item.target),site.header_button.target,site.hero.primary_target,site.hero.secondary_target,...services.groups.flatMap(group=>group.items.filter(item=>item.link_label).map(item=>item.link_target))]) {
     if (!anchors.has(target)) throw new Error(`Unknown navigation anchor: ${target}`);
   }
 }
+

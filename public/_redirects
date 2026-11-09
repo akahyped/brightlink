@@ -1,3 +1,4 @@
 # Legacy Squarespace service URL: permanently redirect to the BrightLink homepage.
-/store/p/retrofitting-internet-cables / 301
-/store/p/retrofitting-internet-cables/ / 301
+/store/p/retrofitting-internet-cables https://brightlinkcle.com/ 301
+/store/p/retrofitting-internet-cables/ https://brightlinkcle.com/ 301
+

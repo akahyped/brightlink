@@ -1,7 +1,7 @@
 {
   "contact": {
     "text_label": "Send a text ↗",
-    "heading": "What’s next\nfor your home?",
+    "heading": "A small fix or\na bigger to-do list?",
     "phone_note": "Call or text to discuss your project.",
     "checklist": [
       {
@@ -18,20 +18,20 @@
       }
     ],
     "email_subject": "BrightLink Project Inquiry",
-    "eyebrow": "Contact BrightLink Cleveland",
+    "eyebrow": "LET’S GET IT HANDLED",
     "email_button_label": "Email your project details ↗",
-    "card_description": "Need a TV mounted, furniture assembled or help connecting your home? Get in touch with Thomas at BrightLink.",
+    "card_description": "A few photos and your city are a great place to start. Project scope, materials and availability are confirmed before work begins.",
     "details_intro": "A few details about your space help us understand the work and plan the next steps:",
     "phone_display": "440-719-9436",
     "call_label": "Call Thomas ↗",
-    "card_heading": "Tell us about your project.",
+    "card_heading": "Talk to Thomas.",
     "email_note": "Opens your email app with a project outline ready to complete.",
     "email_description": "Include the work you need, your location and preferred timing. Attach photos to your email to help explain the space.",
     "card_eyebrow": "Let’s get started",
     "phone_number": "+14407199436",
-    "service_area_note": "Serving the Cleveland area. Availability and project scope are confirmed individually.",
+    "service_area_note": "Serving the Cleveland, Ohio area. Send your city or neighborhood to confirm availability.",
     "email": "brightlinkcle@gmail.com",
-    "description": "A single installation or a whole to-do list—call, text or email with the details of what you need.",
+    "description": "Tell Thomas what you need help with. Call or text for a quick conversation, or email your project details and photos.",
     "email_heading": "Send your project breakdown",
     "email_outline": "Hi Thomas,\n\nI’d like help with the following project.\n\nName: \nPhone number: \nCity or neighborhood: \n\nServices needed: \n\nProject description: \n\nEquipment, furniture or fixture details: \n\nPreferred timing: \n"
   },
@@ -66,52 +66,46 @@
     "subtitle": "CLEVELAND"
   },
   "approach": {
-    "eyebrow": "A straightforward approach",
-    "heading": "From idea to installed.",
+    "eyebrow": "SIMPLE FROM THE START",
+    "heading": "Your project.\nA straightforward plan.",
     "steps": [
       {
-        "heading": "01. Tell us the plan",
+        "heading": "Share your to-do list",
         "description": "Share what you want to install or repair, where it will go and what equipment or materials you already have."
       },
       {
-        "heading": "02. Work through the details",
+        "heading": "Work through the details",
         "description": "Discuss placement, wiring, mounting surfaces and any materials needed before the work begins."
       },
       {
-        "heading": "03. Make it work for you",
+        "heading": "Get it installed & explained",
         "description": "Installation, setup and a walkthrough so you feel comfortable using your equipment and enjoying your space."
       }
     ]
   },
   "service_strip": [
     {
-      "text": "TV MOUNTING"
+      "text": "Practical repairs"
     },
     {
-      "text": "SMART HOME"
+      "text": "Thoughtful installations"
     },
     {
-      "text": "WI-FI & NETWORKING"
-    },
-    {
-      "text": "CAMERAS & AUDIO"
-    },
-    {
-      "text": "HANDYMAN SERVICES"
+      "text": "Clear project planning"
     }
   ],
   "navigation": [
     {
-      "label": "Our services ",
-      "target": "services"
-    },
-    {
-      "label": "Handyman services",
+      "label": "Handyman",
       "target": "handyman"
     },
     {
-      "label": "The approach",
-      "target": "approach"
+      "label": "Electrical",
+      "target": "electrical"
+    },
+    {
+      "label": "Smart home",
+      "target": "services"
     }
   ],
   "ui": {
@@ -127,36 +121,92 @@
   "hero": {
     "heading_lines": [
       {
-        "text": "Your home.",
+        "text": "Handyman help.",
         "emphasized_text": ""
       },
       {
-        "text": "Better ",
-        "emphasized_text": "connected."
+        "text": "Smarter homes.",
+        "emphasized_text": ""
+      },
+      {
+        "text": "",
+        "emphasized_text": "Handled."
       }
     ],
-    "image_caption": "Less clutter. More connection. · Illustration",
+    "image_caption": "A cleaner setup. A more connected home. · Illustration",
     "illustration_label": "Illustration of a wall-mounted television above a walnut console in a warm, modern living room",
-    "secondary_label": "Have a project in mind?",
-    "eyebrow": "Cleveland area · Smart home & handyman services",
-    "primary_target": "services",
+    "secondary_label": "Find your service ↓",
+    "eyebrow": "BRIGHTLINK CLEVELAND · HOME SERVICES",
+    "primary_target": "contact",
     "photo": "",
-    "image_tag": "DESIGNED TO FIT YOUR SPACE",
-    "primary_label": "Explore our services ↗",
+    "image_tag": "SMALL UPGRADES. A BETTER EVERYDAY.",
+    "primary_label": "Tell me about your project",
     "photo_alt": "",
-    "secondary_target": "contact",
-    "description": "From a perfectly placed TV to Wi-Fi that reaches the backyard. Thoughtful installation and practical handyman help for the way you live."
+    "secondary_target": "service-options",
+    "description": "From the jobs on your to-do list to the technology in your home. Get practical help from Thomas with repairs, installations and a cleaner, better-connected space.",
+    "service_summary": "Handyman, minor electrical & smart home services in Cleveland."
   },
   "footer": {
     "brand": "brightlink.",
-    "description": "Cleveland, Ohio · Smart home & handyman services",
+    "description": "Cleveland, Ohio · Handyman, minor electrical & smart home services",
     "top_label": "Back to top ↑"
   },
   "seo": {
-    "title": "BrightLink Cleveland | Smart Home & Handyman Services",
-    "description": "TV mounting, smart home setup and handyman services in Cleveland. Furniture assembly, drywall, painting, window treatments, minor electrical and plumbing. Call 440-719-9436.",
+    "title": "Cleveland Handyman & Smart Home Services | BrightLink",
+    "description": "Handyman help, minor electrical work, TV mounting and smart home installation in the Cleveland area. Call or text Thomas at 440-719-9436.",
     "language": "en",
-    "canonical_url": "",
+    "canonical_url": "https://brightlinkcle.com/",
     "social_image": ""
+  },
+  "experience": {
+    "overview_eyebrow": "WHAT DO YOU NEED A HAND WITH?",
+    "overview_heading": "One contact.\nMore of your home, taken care of.",
+    "categories": [
+      {
+        "kicker": "REPAIR · MOUNT · ASSEMBLE",
+        "title": "Handyman services",
+        "description": "Furniture, shelves, door hardware, drywall, window treatments and everyday home repairs.",
+        "target": "handyman"
+      },
+      {
+        "kicker": "REPLACE · INSTALL · CONNECT",
+        "title": "Minor electrical work",
+        "description": "Outlets, light fixtures, ceiling fans and doorbell transformers. Discuss the details of your project first.",
+        "target": "electrical"
+      },
+      {
+        "kicker": "MOUNT · SET UP · SIMPLIFY",
+        "title": "Smart home & technology",
+        "description": "TV mounting, Wi-Fi, security cameras, smart devices and home audio that fit the way you live.",
+        "target": "services"
+      }
+    ],
+    "area_eyebrow": "LOCAL HELP. PRACTICAL SOLUTIONS.",
+    "area_heading": "At home in the Cleveland area.",
+    "area_description": "BrightLink helps homeowners with installations, repairs and everyday upgrades across the Cleveland area. Include your city or neighborhood when you get in touch so Thomas can confirm travel, timing and the right scope for your job.",
+    "faq_eyebrow": "A FEW THINGS YOU MIGHT BE WONDERING",
+    "faq_heading": "Before we get started.",
+    "faqs": [
+      {
+        "question": "What kinds of handyman jobs can you help with?",
+        "answer": "Furniture assembly, shelf and TV mounting, window treatments, door hardware, drywall patching, touch-up painting and minor plumbing are all part of the service list. Send your to-do list and photos to discuss the exact work."
+      },
+      {
+        "question": "What electrical work does BrightLink handle?",
+        "answer": "Minor electrical projects include receptacle replacement, additional outlets, light-fixture and ceiling-fan replacement, and doorbell transformers. Share photos of your current setup and the equipment you want installed so the work and materials can be discussed before scheduling."
+      },
+      {
+        "question": "Can you help with smart home setup and Wi-Fi?",
+        "answer": "Yes. Services include video doorbells, smart locks, thermostats, lighting, mesh Wi-Fi, Ethernet cabling, wireless bridges, security cameras and home audio. Include the brands or model numbers you already have."
+      },
+      {
+        "question": "Which areas do you serve?",
+        "answer": "BrightLink serves the Cleveland, Ohio area. Share your city or neighborhood so Thomas can confirm whether your location and requested timing can be accommodated."
+      },
+      {
+        "question": "How do I get started or ask about pricing?",
+        "answer": "Call or text 440-719-9436, or email brightlinkcle@gmail.com. Describe the work, your location and preferred timing, and include photos where possible. Scope, materials and scheduling are discussed individually."
+      }
+    ]
   }
 }

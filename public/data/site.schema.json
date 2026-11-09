@@ -12,7 +12,8 @@
     "contact",
     "form",
     "footer",
-    "ui"
+    "ui",
+    "experience"
   ],
   "properties": {
     "schema_version": {
@@ -159,6 +160,9 @@
           "type": "string"
         },
         "image_caption": {
+          "type": "string"
+        },
+        "service_summary": {
           "type": "string"
         }
       }
@@ -443,6 +447,90 @@
         },
         "retry_label": {
           "type": "string"
+        }
+      }
+    },
+    "experience": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "overview_eyebrow",
+        "overview_heading",
+        "categories",
+        "area_eyebrow",
+        "area_heading",
+        "area_description",
+        "faq_eyebrow",
+        "faq_heading",
+        "faqs"
+      ],
+      "properties": {
+        "overview_eyebrow": {
+          "type": "string"
+        },
+        "overview_heading": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kicker",
+              "title",
+              "description",
+              "target"
+            ],
+            "properties": {
+              "kicker": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "target": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "area_eyebrow": {
+          "type": "string"
+        },
+        "area_heading": {
+          "type": "string"
+        },
+        "area_description": {
+          "type": "string"
+        },
+        "faq_eyebrow": {
+          "type": "string"
+        },
+        "faq_heading": {
+          "type": "string"
+        },
+        "faqs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "question",
+              "answer"
+            ],
+            "properties": {
+              "question": {
+                "type": "string"
+              },
+              "answer": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     }

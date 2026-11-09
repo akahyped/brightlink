@@ -8,7 +8,7 @@ const brand = site => `${e(site.brand.name)}<span class="brand-dot">${e(site.bra
 function serviceGroups(content) {
   // Empty anchor placeholders preserve links when an owner temporarily hides a group.
   return content.groups.map(group => group.visible ? `
-    <section class="section" id="${e(group.id)}">
+    <section class="section service-section ${group.items.length===1?'single-service':''}" id="${e(group.id)}">
       <div class="section-head">
         <div><div class="eyebrow">${e(group.eyebrow)}</div><h2>${lines(group.heading)}</h2></div>
         <p>${e(group.description)}</p>
@@ -16,7 +16,7 @@ function serviceGroups(content) {
       <div class="services">${group.items.filter(item => item.visible).map((item,index)=>`
         <article class="service" id="${e(item.id)}">
           ${icon(item.icon)}
-          <span class="number">${String(index+1).padStart(2,'0')} /</span>
+
           <h3>${e(item.title)}</h3>
           ${item.photo ? `<img class="service-photo" src="${e(safePhoto(item.photo))}" alt="${e(item.photo_alt)}" loading="lazy" decoding="async" width="400" height="240">` : ''}
           <p>${lines(item.description)}</p>
@@ -69,6 +69,7 @@ export function renderSite(site, services) {
         <div>
           <div class="eyebrow">${e(site.hero.eyebrow)}</div>
           <h1>${site.hero.heading_lines.map(line=>e(line.text)+(line.emphasized_text?`<em>${e(line.emphasized_text)}</em>`:'')).join('<br>')}</h1>
+          <p class="hero-service-summary">${e(site.hero.service_summary)}</p>
           <p>${e(site.hero.description)}</p>
           <div class="actions">${link(site.hero.primary_label,site.hero.primary_target,'button')}${link(site.hero.secondary_label,site.hero.secondary_target,'text-link')}</div>
         </div>
@@ -77,12 +78,18 @@ export function renderSite(site, services) {
           <span class="room-tag">${e(site.hero.image_tag)}</span><div class="tv"></div><div class="console"></div><div class="plant"></div><div class="caption">${e(site.hero.image_caption)}</div>
         </div>`}
       </section>
+      <section class="section service-options" id="service-options">
+        <div class="eyebrow">${e(site.experience.overview_eyebrow)}</div><h2>${lines(site.experience.overview_heading)}</h2>
+        <div class="category-grid">${site.experience.categories.map(category=>`<a class="category-card" href="#${e(category.target)}"><span class="category-kicker">${e(category.kicker)}</span><h3>${e(category.title)}</h3><p>${e(category.description)}</p><span class="category-arrow" aria-hidden="true">↗</span></a>`).join('')}</div>
+      </section>
       <div class="strip">${site.service_strip.map(item=>`<span>${e(item.text)}</span>`).join('')}</div>
       ${serviceGroups(services)}
       <section class="process" id="approach"><div class="section">
         <div class="eyebrow">${e(site.approach.eyebrow)}</div><h2>${lines(site.approach.heading)}</h2>
         <div class="steps">${site.approach.steps.map(step=>`<article><h3>${e(step.heading)}</h3><p>${e(step.description)}</p></article>`).join('')}</div>
       </div></section>
+      <section class="section local-area"><div class="eyebrow">${e(site.experience.area_eyebrow)}</div><h2>${e(site.experience.area_heading)}</h2><p>${e(site.experience.area_description)}</p></section>
+      <section class="section faq-section" id="questions"><div><div class="eyebrow">${e(site.experience.faq_eyebrow)}</div><h2>${e(site.experience.faq_heading)}</h2></div><div class="faq-list">${site.experience.faqs.map(faq=>`<details><summary>${e(faq.question)}</summary><p>${e(faq.answer)}</p></details>`).join('')}</div></section>
       <section class="contact-section" id="contact"><div class="section project">
         <div>
           <div class="eyebrow">${e(c.eyebrow)}</div><h2>${lines(c.heading)}</h2>
@@ -103,3 +110,4 @@ export function renderSite(site, services) {
     </main>
     <footer><a class="brand footer-brand" href="#home">${e(site.footer.brand)}</a><span>${e(site.footer.description)}</span>${link(site.footer.top_label,'home')}</footer>`;
 }
+

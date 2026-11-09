@@ -116,6 +116,10 @@ collections:
           name: emphasized_text
           widget: string
           required: false
+      - label: Service summary
+        name: service_summary
+        widget: text
+        required: false
       - label: Description
         name: description
         widget: text
@@ -382,6 +386,58 @@ collections:
       - label: Retry label
         name: retry_label
         widget: string
+    - name: experience
+      label: Experience
+      widget: object
+      collapsed: true
+      fields:
+      - name: overview_eyebrow
+        label: Overview eyebrow
+        widget: text
+      - name: overview_heading
+        label: Overview heading
+        widget: text
+      - name: categories
+        label: Categories
+        widget: list
+        fields:
+        - name: kicker
+          label: Kicker
+          widget: text
+        - name: title
+          label: Title
+          widget: text
+        - name: description
+          label: Description
+          widget: text
+        - name: target
+          label: Target
+          widget: text
+      - name: area_eyebrow
+        label: Area eyebrow
+        widget: text
+      - name: area_heading
+        label: Area heading
+        widget: text
+      - name: area_description
+        label: Area description
+        widget: text
+      - name: faq_eyebrow
+        label: Faq eyebrow
+        widget: text
+      - name: faq_heading
+        label: Faq heading
+        widget: text
+      - name: faqs
+        label: Faqs
+        widget: list
+        fields:
+        - name: question
+          label: Question
+          widget: text
+        - name: answer
+          label: Answer
+          widget: text
   - name: services
     label: Service categories & cards
     file: public/data/services.json
@@ -482,3 +538,4 @@ collections:
           widget: string
           hint: 'Page anchor without #. Built-ins: home, approach, contact; service group IDs can also
             be used.'
+

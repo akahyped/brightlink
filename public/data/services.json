@@ -3,9 +3,9 @@
   "groups": [
     {
       "id": "services",
-      "eyebrow": "What we can help with",
-      "heading": "Small upgrades.\nA better everyday.",
-      "description": "Practical help with the technology, connections and finishing touches that make a home work.",
+      "eyebrow": "SMART HOME & TECHNOLOGY",
+      "heading": "Less tech frustration.\nMore connection.",
+      "description": "Installation and setup for the screens, networks, cameras and audio you use every day.",
       "visible": true,
       "items": [
         {
@@ -62,25 +62,14 @@
           "photo_alt": "",
           "link_label": "",
           "link_target": "contact"
-        },
-        {
-          "id": "services-tools",
-          "title": "Handyman services",
-          "description": "Furniture assembly, mounting, home repairs, minor electrical and plumbing. Practical help for your to-do list.",
-          "icon": "tools",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "See handyman services ↗",
-          "link_target": "handyman"
         }
       ]
     },
     {
       "id": "handyman",
-      "eyebrow": "Handyman services",
-      "heading": "Your to-do list.\nTaken care of.",
-      "description": "From assembling furniture to replacing a fixture, get help with the everyday jobs that keep your home comfortable and working well.",
+      "eyebrow": "HANDYMAN SERVICES",
+      "heading": "The to-do list?\nLet’s take care of it.",
+      "description": "Useful, practical help with the repairs and finishing touches that make your home feel complete.",
       "visible": true,
       "items": [
         {
@@ -128,17 +117,6 @@
           "link_target": "contact"
         },
         {
-          "id": "handyman-outlet",
-          "title": "Minor electrical work",
-          "description": "Outlet and receptacle replacement, additional outlets, light-fixture and ceiling-fan replacement, and doorbell transformer installation.",
-          "icon": "outlet",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "",
-          "link_target": "contact"
-        },
-        {
           "id": "handyman-faucet",
           "title": "Minor plumbing & drains",
           "description": "Drain snaking and clog clearing, plus kitchen, bathroom and shower fixture replacements, including faucets, showerheads, sinks and toilets.",
@@ -147,6 +125,37 @@
           "photo": "",
           "photo_alt": "",
           "link_label": "",
+          "link_target": "contact"
+        },
+        {
+          "id": "services-tools",
+          "title": "Home repairs & finishing touches",
+          "description": "Practical help with small home repairs, wall decor, finishing touches and the everyday items on your to-do list.",
+          "icon": "tools",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "",
+          "link_target": "contact"
+        }
+      ]
+    },
+    {
+      "id": "electrical",
+      "eyebrow": "MINOR ELECTRICAL WORK",
+      "heading": "Better lighting.\nConnections where you need them.",
+      "description": "Help with everyday electrical replacements and installations. Share the details of the existing setup so project suitability and any applicable requirements can be confirmed.",
+      "visible": true,
+      "items": [
+        {
+          "id": "handyman-outlet",
+          "title": "Outlets, fixtures & everyday upgrades",
+          "description": "Outlet and receptacle replacement, additional outlets, light-fixture and ceiling-fan replacement, and doorbell transformer installation. Send photos and equipment details to discuss the work.",
+          "icon": "outlet",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "Discuss your electrical project ↗",
           "link_target": "contact"
         }
       ]
