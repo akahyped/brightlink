@@ -37,7 +37,7 @@ export function renderSite(site, services) {
  let cardNumber=0;
  return `<a class="skip" href="#services">${e(site.ui.skip_label)}</a>
  <header><nav class="wrap" aria-label="${e(site.ui.navigation_label)}">
- <a href="#home" class="brand" aria-label="${e(site.brand.name+' '+site.brand.subtitle)}">${site.brand.logo?`<img class="logo" src="${e(safePhoto(site.brand.logo))}" alt="${e(site.brand.logo_alt)}" width="650" height="240">`:`<strong>${e(site.brand.name)}</strong><small>${e(site.brand.subtitle)}</small>`}</a>
+ <a href="#home" class="brand" aria-label="${e(site.brand.name+' '+site.brand.subtitle)}">${site.brand.logo?`<img class="logo" src="${e(safePhoto(site.brand.logo))}" alt="${e(site.brand.logo_alt)}" width="650" height="217">`:`<strong>${e(site.brand.name)}</strong><small>${e(site.brand.subtitle)}</small>`}</a>
  <button class="menu" type="button" aria-expanded="false" aria-controls="navigation">${e(site.ui.menu_label)}</button>
  <div class="navlinks" id="navigation">${site.navigation.map(i=>link(i.label,i.target)).join('')}${link(site.header_button.label,site.header_button.target,'button')}</div></nav></header>
  <main><div class="hero" id="home"><div class="wrap hero-grid"><div>
