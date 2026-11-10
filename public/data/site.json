@@ -1,147 +1,48 @@
 {
-  "schema_version": 1,
-  "seo": {
-    "title": "TV Mounting, Smart Home & Handyman Cleveland | BrightLink",
-    "description": "TV mounting, smart home installation, Wi-Fi, security cameras, handyman help and minor electrical updates in Cleveland. Call or text Thomas at 440-719-9436.",
-    "language": "en",
-    "canonical_url": "https://brightlinkcle.com/",
-    "social_image": ""
+  "contact": {
+    "text_label": "Text your project ↗",
+    "heading": "A smarter home.\nA shorter to-do list.",
+    "email_subject": "BrightLink Project Inquiry",
+    "eyebrow": "Let’s get it handled",
+    "card_description": "Include your location, a description of the work and preferred timing. Attach photos to your text or email.",
+    "phone_display": "440-719-9436",
+    "call_label": "Call Thomas ↗",
+    "card_eyebrow": "Talk to Thomas",
+    "phone_number": "+14407199436",
+    "email": "brightlinkcle@gmail.com",
+    "description": "Tell me what you’re working on. A couple of photos and your city are all you need to start the conversation.",
+    "email_outline": "Hi Thomas,\n\nI’d like help with the following project.\n\nName: \nPhone number: \nCity or neighborhood: \n\nServices needed: \n\nProject description: \n\nEquipment, furniture or fixture details: \n\nPreferred timing: \n"
+  },
+  "form": {
+    "name_label": "Name",
+    "enabled": true,
+    "turnstile_site_key": "0x4AAAAAAF74gPXKW42RQybx",
+    "heading": "Or use this contact form",
+    "phone_label": "Phone",
+    "privacy_note": "Your contact details and project description will be used to respond to your inquiry.",
+    "service_placeholder": "Choose a service",
+    "service_label": "Services needed",
+    "location_label": "City or neighborhood",
+    "success_message": "Thanks for contacting BrightLink! Your inquiry has been accepted for delivery. Thomas will be in touch.",
+    "submit_label": "Send project inquiry",
+    "sending_label": "Sending…",
+    "error_message": "Your inquiry could not be sent. Please try again, call or email us.",
+    "email_label": "Email",
+    "not_configured_message": "Online inquiries are not available yet. Please call, text or email us.",
+    "details_placeholder": "Tell us what you need help with, and include equipment or fixture details.",
+    "details_label": "Project description",
+    "description": "Send your project details right here—no email app needed.",
+    "timing_label": "Preferred timing"
+  },
+  "header_button": {
+    "label": "Let’s talk ↗",
+    "target": "contact"
   },
   "brand": {
     "name": "BrightLink",
     "subtitle": "Smart home & handyman · Cleveland",
     "logo": "/assets/images/brightlink-logo-transparent.png",
     "logo_alt": "BrightLink Smart Home Services Cleveland"
-  },
-  "navigation": [
-    {
-      "label": "What I do",
-      "target": "services"
-    },
-    {
-      "label": "How it works",
-      "target": "approach"
-    },
-    {
-      "label": "FAQs",
-      "target": "questions"
-    }
-  ],
-  "header_button": {
-    "label": "Let’s talk ↗",
-    "target": "contact"
-  },
-  "hero": {
-    "eyebrow": "Smart home & handyman · Cleveland",
-    "heading_lines": [
-      {
-        "text": "Your home.",
-        "emphasized_text": ""
-      },
-      {
-        "text": "More connected.",
-        "emphasized_text": ""
-      },
-      {
-        "text": "",
-        "emphasized_text": "Better everyday."
-      }
-    ],
-    "service_summary": "TV mounting, smart home & handyman services in Cleveland.",
-    "description": "TVs mounted beautifully. Wi-Fi that reaches further. Smart devices that make sense. And a helping hand for the rest of your home.",
-    "primary_label": "Tell me about your project ↗",
-    "primary_target": "contact",
-    "secondary_label": "Explore services ↓",
-    "secondary_target": "services",
-    "note": "Local help from Thomas · Cleveland, Ohio area"
-  },
-  "hero_showcase": {
-    "eyebrow": "THOUGHTFULLY INSTALLED.",
-    "location": "BRIGHTLINK / CLE",
-    "heading": "Small upgrades.",
-    "accent": "Big difference.",
-    "footer": "YOUR SPACE. YOUR PROJECT.",
-    "link_label": "Let’s make it happen ↗",
-    "link_target": "contact",
-    "items": [
-      {
-        "heading": "Mount it. Hide the wires.",
-        "description": "TV mounting & home audio",
-        "icon": "tv",
-        "target": "services-tv"
-      },
-      {
-        "heading": "A more connected home.",
-        "description": "Smart devices, Wi-Fi & cameras",
-        "icon": "wifi",
-        "target": "services-home"
-      },
-      {
-        "heading": "Finally off your to-do list.",
-        "description": "Handyman & minor electrical",
-        "icon": "tools",
-        "target": "handyman-shelf"
-      }
-    ]
-  },
-  "service_strip": [
-    {
-      "text": "TV mounting & audio"
-    },
-    {
-      "text": "Smart home & Wi-Fi"
-    },
-    {
-      "text": "Cameras & security"
-    },
-    {
-      "text": "Handyman & electrical"
-    }
-  ],
-  "feature": {
-    "eyebrow": "Where home meets technology",
-    "heading": "Good technology.\nEven better when\nit all works together.",
-    "paragraphs": [
-      {
-        "text": "A great setup is about more than plugging things in. It's finding the right placement, making clean connections and showing you how everything works."
-      },
-      {
-        "text": "Bring the equipment you already have, or talk through your plans before buying. We'll work out the details around your home and how you use it."
-      }
-    ],
-    "tags": [
-      {
-        "text": "Ring & Nest"
-      },
-      {
-        "text": "Eero & Deco"
-      },
-      {
-        "text": "Sonos"
-      },
-      {
-        "text": "Samsung Frame"
-      },
-      {
-        "text": "PoE & NVR"
-      }
-    ],
-    "illustration_label": "Connected home services",
-    "hub_icon": "home",
-    "nodes": [
-      {
-        "icon": "wifi",
-        "label": "Stronger Wi-Fi"
-      },
-      {
-        "icon": "tv",
-        "label": "Better entertainment"
-      },
-      {
-        "icon": "outlet",
-        "label": "Smarter devices"
-      }
-    ]
   },
   "approach": {
     "eyebrow": "Simple from the first message",
@@ -194,51 +95,150 @@
       }
     ]
   },
-  "contact": {
-    "text_label": "Text your project ↗",
-    "heading": "A smarter home.\nA shorter to-do list.",
-    "email_subject": "BrightLink Project Inquiry",
-    "eyebrow": "Let’s get it handled",
-    "card_description": "Include your location, a description of the work and preferred timing. Attach photos to your text or email.",
-    "phone_display": "440-719-9436",
-    "call_label": "Call Thomas ↗",
-    "card_eyebrow": "Talk to Thomas",
-    "phone_number": "+14407199436",
-    "email": "brightlinkcle@gmail.com",
-    "description": "Tell me what you’re working on. A couple of photos and your city are all you need to start the conversation.",
-    "email_outline": "Hi Thomas,\n\nI’d like help with the following project.\n\nName: \nPhone number: \nCity or neighborhood: \n\nServices needed: \n\nProject description: \n\nEquipment, furniture or fixture details: \n\nPreferred timing: \n"
+  "service_strip": [
+    {
+      "text": "TV mounting & audio"
+    },
+    {
+      "text": "Smart home & Wi-Fi"
+    },
+    {
+      "text": "Cameras & security"
+    },
+    {
+      "text": "Handyman & electrical"
+    }
+  ],
+  "hero_showcase": {
+    "eyebrow": "THOUGHTFULLY INSTALLED.",
+    "location": "BRIGHTLINK / CLE",
+    "heading": "Small upgrades.",
+    "accent": "Big difference.",
+    "footer": "YOUR SPACE. YOUR PROJECT.",
+    "link_label": "Let’s make it happen ↗",
+    "link_target": "contact",
+    "items": [
+      {
+        "heading": "Mount it. Hide the wires.",
+        "description": "TV mounting & home audio",
+        "icon": "tv",
+        "target": "services-tv"
+      },
+      {
+        "heading": "A more connected home.",
+        "description": "Smart devices, Wi-Fi & cameras",
+        "icon": "wifi",
+        "target": "services-home"
+      },
+      {
+        "heading": "Finally off your to-do list.",
+        "description": "Handyman & minor electrical",
+        "icon": "tools",
+        "target": "handyman-shelf"
+      }
+    ]
   },
-  "form": {
-    "name_label": "Name",
-    "enabled": true,
-    "turnstile_site_key": "",
-    "heading": "Or use this contact form",
-    "phone_label": "Phone",
-    "privacy_note": "Your contact details and project description will be used to respond to your inquiry.",
-    "service_placeholder": "Choose a service",
-    "service_label": "Services needed",
-    "location_label": "City or neighborhood",
-    "success_message": "Thanks for contacting BrightLink! Your inquiry has been accepted for delivery. Thomas will be in touch.",
-    "submit_label": "Send project inquiry",
-    "sending_label": "Sending…",
-    "error_message": "Your inquiry could not be sent. Please try again, call or email us.",
-    "email_label": "Email",
-    "not_configured_message": "Online inquiries are not available yet. Please call, text or email us.",
-    "details_placeholder": "Tell us what you need help with, and include equipment or fixture details.",
-    "details_label": "Project description",
-    "description": "Send your project details right here—no email app needed.",
-    "timing_label": "Preferred timing"
-  },
-  "footer": {
-    "brand": "brightlink.",
-    "description": "Cleveland, Ohio · Handyman, minor electrical & smart home services",
-    "top_label": "Back to top ↑"
-  },
+  "navigation": [
+    {
+      "label": "What I do",
+      "target": "services"
+    },
+    {
+      "label": "How it works",
+      "target": "approach"
+    },
+    {
+      "label": "FAQs",
+      "target": "questions"
+    }
+  ],
   "ui": {
     "skip_label": "Skip to services",
     "navigation_label": "Main navigation",
     "menu_label": "Menu",
     "required_note": "Required fields are marked with an asterisk.",
     "selected_project_label": "Your project:"
+  },
+  "feature": {
+    "eyebrow": "Where home meets technology",
+    "heading": "Good technology.\nEven better when\nit all works together.",
+    "paragraphs": [
+      {
+        "text": "A great setup is about more than plugging things in. It's finding the right placement, making clean connections and showing you how everything works."
+      },
+      {
+        "text": "Bring the equipment you already have, or talk through your plans before buying. We'll work out the details around your home and how you use it."
+      }
+    ],
+    "tags": [
+      {
+        "text": "Ring & Nest"
+      },
+      {
+        "text": "Eero & Deco"
+      },
+      {
+        "text": "Sonos"
+      },
+      {
+        "text": "Samsung Frame"
+      },
+      {
+        "text": "PoE & NVR"
+      }
+    ],
+    "illustration_label": "Connected home services",
+    "hub_icon": "home",
+    "nodes": [
+      {
+        "icon": "wifi",
+        "label": "Stronger Wi-Fi"
+      },
+      {
+        "icon": "tv",
+        "label": "Better entertainment"
+      },
+      {
+        "icon": "outlet",
+        "label": "Smarter devices"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "hero": {
+    "heading_lines": [
+      {
+        "text": "Your home.",
+        "emphasized_text": ""
+      },
+      {
+        "text": "More connected.",
+        "emphasized_text": ""
+      },
+      {
+        "text": "",
+        "emphasized_text": "Better everyday."
+      }
+    ],
+    "secondary_label": "Explore services ↓",
+    "eyebrow": "Smart home & handyman · Cleveland",
+    "primary_target": "contact",
+    "note": "Local help from Thomas · Cleveland, Ohio area",
+    "primary_label": "Tell me about your project ↗",
+    "service_summary": "TV mounting, smart home & handyman services in Cleveland.",
+    "secondary_target": "services",
+    "description": "TVs mounted beautifully. Wi-Fi that reaches further. Smart devices that make sense. And a helping hand for the rest of your home."
+  },
+  "footer": {
+    "brand": "brightlink.",
+    "description": "Cleveland, Ohio · Handyman, minor electrical & smart home services",
+    "top_label": "Back to top ↑"
+  },
+  "seo": {
+    "title": "TV Mounting, Smart Home & Handyman Cleveland | BrightLink",
+    "description": "TV mounting, smart home installation, Wi-Fi, security cameras, handyman help and minor electrical updates in Cleveland. Call or text Thomas at 440-719-9436.",
+    "language": "en",
+    "canonical_url": "https://brightlinkcle.com/",
+    "social_image": ""
   }
 }
