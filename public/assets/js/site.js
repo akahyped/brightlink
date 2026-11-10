@@ -26,5 +26,22 @@ async function start() {
     // The complete build-generated page remains usable if runtime JSON requests fail.
     console.warn('Showing the published content snapshot.',error);
   }
+  finally { setupInteractions(); }
 }
 start();
+
+function setupInteractions() {
+ const menu=document.querySelector('.menu'),nav=document.querySelector('.navlinks');
+ const close=()=>{menu?.setAttribute('aria-expanded','false');nav?.classList.remove('open');};
+ menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);});
+ nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+ document.addEventListener('keydown',event=>{if(event.key==='Escape')close();});
+ const selected=document.querySelector('#selected-project'),sms=document.querySelector('#text-project');
+ const base=sms?.getAttribute('href');
+ document.querySelectorAll('[data-service]').forEach(a=>a.addEventListener('click',()=>{
+  const service=a.dataset.service;
+  if(selected)selected.textContent=selected.dataset.label+' '+service;
+  if(sms)sms.href=base+'?body='+encodeURIComponent(service);
+  const field=document.querySelector('#inquiry-service');if(field)field.value=service;
+ }));
+}

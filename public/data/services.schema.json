@@ -18,6 +18,7 @@
           "id",
           "eyebrow",
           "heading",
+          "description",
           "visible"
         ],
         "properties": {
@@ -44,8 +45,11 @@
               "required": [
                 "id",
                 "title",
+                "tagline",
+                "description",
                 "icon",
                 "visible",
+                "link_label",
                 "link_target"
               ],
               "properties": {
@@ -55,8 +59,26 @@
                 "title": {
                   "type": "string"
                 },
+                "tagline": {
+                  "type": "string"
+                },
                 "description": {
                   "type": "string"
+                },
+                "bullets": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "text"
+                    ],
+                    "properties": {
+                      "text": {
+                        "type": "string"
+                      }
+                    }
+                  }
                 },
                 "icon": {
                   "type": "string",

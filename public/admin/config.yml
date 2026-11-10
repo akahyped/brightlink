@@ -1,4 +1,3 @@
-# Configure the BrightLink repository and production auth origin before login.
 backend:
   name: github
   repo: akahyped/brightlink
@@ -18,7 +17,7 @@ collections:
   label: BrightLink website
   files:
   - name: site
-    label: Page content & contact
+    label: Page content, branding & contact
     file: public/data/site.json
     format: json
     fields:
@@ -34,22 +33,25 @@ collections:
       - label: Title
         name: title
         widget: string
+        required: true
       - label: Description
         name: description
         widget: text
-        required: false
+        required: true
       - label: Language
         name: language
         widget: string
+        required: true
       - label: Canonical url
         name: canonical_url
         widget: string
-        required: false
+        required: true
       - label: Social image
         name: social_image
         widget: image
-        required: false
         choose_url: false
+        required: false
+      required: true
     - label: Brand
       name: brand
       widget: object
@@ -58,28 +60,39 @@ collections:
       - label: Name
         name: name
         widget: string
-      - label: Dot
-        name: dot
-        widget: string
+        required: true
       - label: Subtitle
         name: subtitle
         widget: string
+        required: true
+      - label: Logo
+        name: logo
+        widget: image
+        choose_url: false
+        required: false
+      - label: Logo alt
+        name: logo_alt
+        widget: string
+        required: true
+      required: true
     - label: Navigation
       name: navigation
       widget: list
-      required: false
       collapsed: true
-      summary: '{{fields.title}}{{fields.label}}{{fields.heading}}{{fields.text}}{{fields.id}}'
-      hint: Add, delete or drag entries to reorder.
+      required: false
+      summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+      hint: Add, remove or drag entries to reorder.
       fields:
       - label: Label
         name: label
         widget: string
+        required: true
       - label: Target
         name: target
         widget: string
-        hint: 'Page anchor without #. Built-ins: home, approach, contact; service group IDs can also be
-          used.'
+        hint: 'Section or service ID without #. Built-ins: home, services, approach,
+          questions, contact.'
+        required: true
     - label: Header button
       name: header_button
       widget: object
@@ -88,11 +101,14 @@ collections:
       - label: Label
         name: label
         widget: string
+        required: true
       - label: Target
         name: target
         widget: string
-        hint: 'Page anchor without #. Built-ins: home, approach, contact; service group IDs can also be
-          used.'
+        hint: 'Section or service ID without #. Built-ins: home, services, approach,
+          questions, contact.'
+        required: true
+      required: true
     - label: Hero
       name: hero
       widget: object
@@ -101,17 +117,19 @@ collections:
       - label: Eyebrow
         name: eyebrow
         widget: string
+        required: true
       - label: Heading lines
         name: heading_lines
         widget: list
-        required: false
         collapsed: true
-        summary: '{{fields.title}}{{fields.label}}{{fields.heading}}{{fields.text}}{{fields.id}}'
-        hint: Add, delete or drag entries to reorder.
+        required: false
+        summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+        hint: Add, remove or drag entries to reorder.
         fields:
         - label: Text
           name: text
           widget: string
+          required: false
         - label: Emphasized text
           name: emphasized_text
           widget: string
@@ -119,387 +137,87 @@ collections:
       - label: Service summary
         name: service_summary
         widget: text
-        required: false
+        required: true
       - label: Description
         name: description
         widget: text
-        required: false
+        required: true
       - label: Primary label
         name: primary_label
         widget: string
+        required: true
       - label: Primary target
         name: primary_target
         widget: string
-        hint: 'Page anchor without #. Built-ins: home, approach, contact; service group IDs can also be
-          used.'
+        hint: 'Section or service ID without #. Built-ins: home, services, approach,
+          questions, contact.'
+        required: true
       - label: Secondary label
         name: secondary_label
         widget: string
+        required: true
       - label: Secondary target
         name: secondary_target
         widget: string
-        hint: 'Page anchor without #. Built-ins: home, approach, contact; service group IDs can also be
-          used.'
-      - label: Photo
-        name: photo
-        widget: image
-        required: false
-        choose_url: false
-      - label: Photo alt
-        name: photo_alt
-        widget: string
-        required: false
-      - label: Illustration label
-        name: illustration_label
-        widget: string
-      - label: Image tag
-        name: image_tag
-        widget: string
-        required: false
-      - label: Image caption
-        name: image_caption
-        widget: string
-        required: false
-    - label: Service strip
-      name: service_strip
-      widget: list
-      required: false
-      collapsed: true
-      summary: '{{fields.title}}{{fields.label}}{{fields.heading}}{{fields.text}}{{fields.id}}'
-      hint: Add, delete or drag entries to reorder.
-      fields:
-      - label: Text
-        name: text
-        widget: string
-    - label: Approach
-      name: approach
+        hint: 'Section or service ID without #. Built-ins: home, services, approach,
+          questions, contact.'
+        required: true
+      - label: Note
+        name: note
+        widget: text
+        required: true
+      required: true
+    - label: Hero showcase
+      name: hero_showcase
       widget: object
       collapsed: true
       fields:
       - label: Eyebrow
         name: eyebrow
         widget: string
-      - label: Heading
-        name: heading
+        required: true
+      - label: Location
+        name: location
         widget: string
-      - label: Steps
-        name: steps
-        widget: list
-        required: false
-        collapsed: true
-        summary: '{{fields.title}}{{fields.label}}{{fields.heading}}{{fields.text}}{{fields.id}}'
-        hint: Add, delete or drag entries to reorder.
-        fields:
-        - label: Heading
-          name: heading
-          widget: string
-        - label: Description
-          name: description
-          widget: text
-          required: false
-    - label: Contact
-      name: contact
-      widget: object
-      collapsed: true
-      fields:
-      - label: Eyebrow
-        name: eyebrow
-        widget: string
+        required: true
       - label: Heading
         name: heading
         widget: text
-      - label: Description
-        name: description
-        widget: text
-        required: false
-      - label: Details intro
-        name: details_intro
-        widget: text
-      - label: Checklist
-        name: checklist
-        widget: list
-        required: false
-        collapsed: true
-        summary: '{{fields.title}}{{fields.label}}{{fields.heading}}{{fields.text}}{{fields.id}}'
-        hint: Add, delete or drag entries to reorder.
-        fields:
-        - label: Text
-          name: text
-          widget: string
-      - label: Service area note
-        name: service_area_note
+        required: true
+      - label: Accent
+        name: accent
         widget: string
-        required: false
-      - label: Card eyebrow
-        name: card_eyebrow
+        required: true
+      - label: Footer
+        name: footer
         widget: string
-      - label: Card heading
-        name: card_heading
+        required: true
+      - label: Link label
+        name: link_label
         widget: string
-      - label: Card description
-        name: card_description
-        widget: text
-      - label: Phone display
-        name: phone_display
+        required: true
+      - label: Link target
+        name: link_target
         widget: string
-      - label: Phone number
-        name: phone_number
-        widget: string
-      - label: Phone note
-        name: phone_note
-        widget: string
-        required: false
-      - label: Call label
-        name: call_label
-        widget: string
-      - label: Text label
-        name: text_label
-        widget: string
-      - label: Email
-        name: email
-        widget: string
-      - label: Email heading
-        name: email_heading
-        widget: string
-      - label: Email description
-        name: email_description
-        widget: text
-      - label: Email button label
-        name: email_button_label
-        widget: string
-      - label: Email subject
-        name: email_subject
-        widget: string
-        required: false
-      - label: Email outline
-        name: email_outline
-        widget: text
-        required: false
-      - label: Email note
-        name: email_note
-        widget: string
-        required: false
-    - label: Form
-      name: form
-      widget: object
-      collapsed: true
-      fields:
-      - label: Enabled
-        name: enabled
-        widget: boolean
-        default: true
-      - label: Heading
-        name: heading
-        widget: string
-      - label: Description
-        name: description
-        widget: text
-        required: false
-      - label: Name label
-        name: name_label
-        widget: string
-      - label: Email label
-        name: email_label
-        widget: string
-      - label: Phone label
-        name: phone_label
-        widget: string
-      - label: Location label
-        name: location_label
-        widget: string
-      - label: Service label
-        name: service_label
-        widget: string
-      - label: Service placeholder
-        name: service_placeholder
-        widget: string
-      - label: Timing label
-        name: timing_label
-        widget: string
-      - label: Details label
-        name: details_label
-        widget: string
-      - label: Details placeholder
-        name: details_placeholder
-        widget: text
-      - label: Submit label
-        name: submit_label
-        widget: string
-      - label: Sending label
-        name: sending_label
-        widget: string
-      - label: Success message
-        name: success_message
-        widget: string
-      - label: Error message
-        name: error_message
-        widget: string
-      - label: Not configured message
-        name: not_configured_message
-        widget: string
-      - label: Privacy note
-        name: privacy_note
-        widget: string
-      - label: Turnstile site key
-        name: turnstile_site_key
-        widget: string
-        required: false
-        hint: Public Turnstile site key only. Never paste the secret key here.
-    - label: Footer
-      name: footer
-      widget: object
-      collapsed: true
-      fields:
-      - label: Brand
-        name: brand
-        widget: string
-      - label: Description
-        name: description
-        widget: text
-        required: false
-      - label: Top label
-        name: top_label
-        widget: string
-    - label: Ui
-      name: ui
-      widget: object
-      collapsed: true
-      fields:
-      - label: Navigation label
-        name: navigation_label
-        widget: string
-      - label: Skip label
-        name: skip_label
-        widget: string
-      - label: Service options label
-        name: service_options_label
-        widget: string
-      - label: Required note
-        name: required_note
-        widget: string
-      - label: Loading
-        name: loading
-        widget: string
-      - label: Load error
-        name: load_error
-        widget: string
-      - label: Retry label
-        name: retry_label
-        widget: string
-    - name: experience
-      label: Experience
-      widget: object
-      collapsed: true
-      fields:
-      - name: overview_eyebrow
-        label: Overview eyebrow
-        widget: text
-      - name: overview_heading
-        label: Overview heading
-        widget: text
-      - name: categories
-        label: Categories
-        widget: list
-        fields:
-        - name: kicker
-          label: Kicker
-          widget: text
-        - name: title
-          label: Title
-          widget: text
-        - name: description
-          label: Description
-          widget: text
-        - name: target
-          label: Target
-          widget: text
-      - name: area_eyebrow
-        label: Area eyebrow
-        widget: text
-      - name: area_heading
-        label: Area heading
-        widget: text
-      - name: area_description
-        label: Area description
-        widget: text
-      - name: faq_eyebrow
-        label: Faq eyebrow
-        widget: text
-      - name: faq_heading
-        label: Faq heading
-        widget: text
-      - name: faqs
-        label: Faqs
-        widget: list
-        fields:
-        - name: question
-          label: Question
-          widget: text
-        - name: answer
-          label: Answer
-          widget: text
-  - name: services
-    label: Service categories & cards
-    file: public/data/services.json
-    format: json
-    fields:
-    - label: Schema version
-      name: schema_version
-      widget: hidden
-      default: 1
-    - label: Groups
-      name: groups
-      widget: list
-      required: false
-      collapsed: true
-      summary: '{{fields.title}}{{fields.label}}{{fields.heading}}{{fields.text}}{{fields.id}}'
-      hint: Add, delete or drag entries to reorder.
-      fields:
-      - label: Id
-        name: id
-        widget: string
-        pattern:
-        - ^[a-z0-9]+(-[a-z0-9]+)*$
-        - Use unique lowercase words joined by hyphens.
-        hint: Keep IDs unique and stable. A category ID becomes its page anchor. Add its navigation label
-          under Page content.
-      - label: Eyebrow
-        name: eyebrow
-        widget: string
-      - label: Heading
-        name: heading
-        widget: text
-      - label: Description
-        name: description
-        widget: text
-        required: false
-      - label: Visible
-        name: visible
-        widget: boolean
-        default: true
+        hint: 'Section or service ID without #. Built-ins: home, services, approach,
+          questions, contact.'
+        required: true
       - label: Items
         name: items
         widget: list
-        required: false
         collapsed: true
-        summary: '{{fields.title}}{{fields.label}}{{fields.heading}}{{fields.text}}{{fields.id}}'
-        hint: Add, delete or drag entries to reorder.
+        required: false
+        summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+        hint: Add, remove or drag entries to reorder.
         fields:
-        - label: Id
-          name: id
-          widget: string
-          pattern:
-          - ^[a-z0-9]+(-[a-z0-9]+)*$
-          - Use unique lowercase words joined by hyphens.
-          hint: Keep IDs unique and stable. A category ID becomes its page anchor. Add its navigation
-            label under Page content.
-        - label: Title
-          name: title
-          widget: string
+        - label: Heading
+          name: heading
+          widget: text
+          required: true
         - label: Description
           name: description
           widget: text
-          required: false
+          required: true
         - label: Icon
           name: icon
           widget: select
@@ -516,15 +234,485 @@ collections:
           - paint
           - outlet
           - faucet
+          required: true
+        - label: Target
+          name: target
+          widget: string
+          hint: 'Section or service ID without #. Built-ins: home, services, approach,
+            questions, contact.'
+          required: true
+      required: true
+    - label: Service strip
+      name: service_strip
+      widget: list
+      collapsed: true
+      required: false
+      summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+      hint: Add, remove or drag entries to reorder.
+      fields:
+      - label: Text
+        name: text
+        widget: string
+        required: true
+    - label: Feature
+      name: feature
+      widget: object
+      collapsed: true
+      fields:
+      - label: Eyebrow
+        name: eyebrow
+        widget: string
+        required: true
+      - label: Heading
+        name: heading
+        widget: text
+        required: true
+      - label: Paragraphs
+        name: paragraphs
+        widget: list
+        collapsed: true
+        required: false
+        summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+        hint: Add, remove or drag entries to reorder.
+        fields:
+        - label: Text
+          name: text
+          widget: string
+          required: true
+      - label: Tags
+        name: tags
+        widget: list
+        collapsed: true
+        required: false
+        summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+        hint: Add, remove or drag entries to reorder.
+        fields:
+        - label: Text
+          name: text
+          widget: string
+          required: true
+      - label: Illustration label
+        name: illustration_label
+        widget: string
+        required: true
+      - label: Hub icon
+        name: hub_icon
+        widget: select
+        options:
+        - tv
+        - home
+        - wifi
+        - camera
+        - audio
+        - tools
+        - shelf
+        - window
+        - door
+        - paint
+        - outlet
+        - faucet
+        required: true
+      - label: Nodes
+        name: nodes
+        widget: list
+        collapsed: true
+        required: false
+        summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+        hint: Add, remove or drag entries to reorder.
+        fields:
+        - label: Icon
+          name: icon
+          widget: select
+          options:
+          - tv
+          - home
+          - wifi
+          - camera
+          - audio
+          - tools
+          - shelf
+          - window
+          - door
+          - paint
+          - outlet
+          - faucet
+          required: true
+        - label: Label
+          name: label
+          widget: string
+          required: true
+      required: true
+    - label: Approach
+      name: approach
+      widget: object
+      collapsed: true
+      fields:
+      - label: Eyebrow
+        name: eyebrow
+        widget: string
+        required: true
+      - label: Heading
+        name: heading
+        widget: text
+        required: true
+      - label: Steps
+        name: steps
+        widget: list
+        collapsed: true
+        required: false
+        summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+        hint: Add, remove or drag entries to reorder.
+        fields:
+        - label: Heading
+          name: heading
+          widget: text
+          required: true
+        - label: Description
+          name: description
+          widget: text
+          required: true
+        - label: Label
+          name: label
+          widget: string
+          required: true
+      required: true
+    - label: Experience
+      name: experience
+      widget: object
+      collapsed: true
+      fields:
+      - label: Area eyebrow
+        name: area_eyebrow
+        widget: string
+        required: true
+      - label: Area heading
+        name: area_heading
+        widget: string
+        required: true
+      - label: Area description
+        name: area_description
+        widget: string
+        required: true
+      - label: Faq eyebrow
+        name: faq_eyebrow
+        widget: string
+        required: true
+      - label: Faq heading
+        name: faq_heading
+        widget: string
+        required: true
+      - label: Faq description
+        name: faq_description
+        widget: string
+        required: true
+      - label: Faqs
+        name: faqs
+        widget: list
+        collapsed: true
+        required: false
+        summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+        hint: Add, remove or drag entries to reorder.
+        fields:
+        - label: Question
+          name: question
+          widget: string
+          required: true
+        - label: Answer
+          name: answer
+          widget: text
+          required: true
+      required: true
+    - label: Contact
+      name: contact
+      widget: object
+      collapsed: true
+      fields:
+      - label: Text label
+        name: text_label
+        widget: string
+        required: true
+      - label: Heading
+        name: heading
+        widget: text
+        required: true
+      - label: Email subject
+        name: email_subject
+        widget: string
+        required: true
+      - label: Eyebrow
+        name: eyebrow
+        widget: string
+        required: true
+      - label: Card description
+        name: card_description
+        widget: text
+        required: true
+      - label: Phone display
+        name: phone_display
+        widget: string
+        required: true
+      - label: Call label
+        name: call_label
+        widget: string
+        required: true
+      - label: Card eyebrow
+        name: card_eyebrow
+        widget: string
+        required: true
+      - label: Phone number
+        name: phone_number
+        widget: string
+        required: true
+      - label: Email
+        name: email
+        widget: string
+        required: true
+      - label: Description
+        name: description
+        widget: text
+        required: true
+      - label: Email outline
+        name: email_outline
+        widget: text
+        required: true
+      required: true
+    - label: Form
+      name: form
+      widget: object
+      collapsed: true
+      fields:
+      - label: Name label
+        name: name_label
+        widget: string
+        required: true
+      - label: Enabled
+        name: enabled
+        widget: boolean
+        default: true
+        required: true
+      - label: Turnstile site key
+        name: turnstile_site_key
+        widget: string
+        required: false
+        hint: Public site key only. Keep the secret in Cloudflare.
+      - label: Heading
+        name: heading
+        widget: text
+        required: true
+      - label: Phone label
+        name: phone_label
+        widget: string
+        required: true
+      - label: Privacy note
+        name: privacy_note
+        widget: string
+        required: true
+      - label: Service placeholder
+        name: service_placeholder
+        widget: string
+        required: true
+      - label: Service label
+        name: service_label
+        widget: string
+        required: true
+      - label: Location label
+        name: location_label
+        widget: string
+        required: true
+      - label: Success message
+        name: success_message
+        widget: string
+        required: true
+      - label: Submit label
+        name: submit_label
+        widget: string
+        required: true
+      - label: Sending label
+        name: sending_label
+        widget: string
+        required: true
+      - label: Error message
+        name: error_message
+        widget: string
+        required: true
+      - label: Email label
+        name: email_label
+        widget: string
+        required: true
+      - label: Not configured message
+        name: not_configured_message
+        widget: string
+        required: true
+      - label: Details placeholder
+        name: details_placeholder
+        widget: text
+        required: true
+      - label: Details label
+        name: details_label
+        widget: string
+        required: true
+      - label: Description
+        name: description
+        widget: text
+        required: true
+      - label: Timing label
+        name: timing_label
+        widget: string
+        required: true
+      required: true
+    - label: Footer
+      name: footer
+      widget: object
+      collapsed: true
+      fields:
+      - label: Brand
+        name: brand
+        widget: string
+        required: true
+      - label: Description
+        name: description
+        widget: text
+        required: true
+      - label: Top label
+        name: top_label
+        widget: string
+        required: true
+      required: true
+    - label: Ui
+      name: ui
+      widget: object
+      collapsed: true
+      fields:
+      - label: Skip label
+        name: skip_label
+        widget: string
+        required: true
+      - label: Navigation label
+        name: navigation_label
+        widget: string
+        required: true
+      - label: Menu label
+        name: menu_label
+        widget: string
+        required: true
+      - label: Required note
+        name: required_note
+        widget: string
+        required: true
+      - label: Selected project label
+        name: selected_project_label
+        widget: string
+        required: true
+      required: true
+  - name: services
+    label: Services, descriptions & bullet lists
+    file: public/data/services.json
+    format: json
+    fields:
+    - label: Schema version
+      name: schema_version
+      widget: hidden
+      default: 1
+    - label: Groups
+      name: groups
+      widget: list
+      collapsed: true
+      required: false
+      summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+      hint: Add, remove or drag entries to reorder.
+      fields:
+      - label: Id
+        name: id
+        widget: string
+        pattern:
+        - ^[a-z0-9]+(-[a-z0-9]+)*$
+        - Use unique lowercase words joined with hyphens.
+        hint: Keep this anchor stable after publishing.
+        required: true
+      - label: Eyebrow
+        name: eyebrow
+        widget: string
+        required: true
+      - label: Heading
+        name: heading
+        widget: text
+        required: true
+      - label: Description
+        name: description
+        widget: text
+        required: true
+      - label: Visible
+        name: visible
+        widget: boolean
+        default: true
+        required: true
+      - label: Items
+        name: items
+        widget: list
+        collapsed: true
+        required: false
+        summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+        hint: Add, remove or drag entries to reorder.
+        fields:
+        - label: Id
+          name: id
+          widget: string
+          pattern:
+          - ^[a-z0-9]+(-[a-z0-9]+)*$
+          - Use unique lowercase words joined with hyphens.
+          hint: Keep this anchor stable after publishing.
+          required: true
+        - label: Title
+          name: title
+          widget: string
+          required: true
+        - label: Tagline
+          name: tagline
+          widget: string
+          required: true
+        - label: Description
+          name: description
+          widget: text
+          required: true
+        - label: Bullets
+          name: bullets
+          widget: list
+          collapsed: true
+          required: false
+          summary: '{{fields.title}}{{fields.heading}}{{fields.label}}{{fields.text}}{{fields.question}}'
+          hint: Add, remove or drag entries to reorder.
+          fields:
+          - label: Text
+            name: text
+            widget: string
+            required: true
+        - label: Icon
+          name: icon
+          widget: select
+          options:
+          - tv
+          - home
+          - wifi
+          - camera
+          - audio
+          - tools
+          - shelf
+          - window
+          - door
+          - paint
+          - outlet
+          - faucet
+          required: true
         - label: Visible
           name: visible
           widget: boolean
           default: true
+          required: true
         - label: Photo
           name: photo
           widget: image
-          required: false
           choose_url: false
+          required: false
         - label: Photo alt
           name: photo_alt
           widget: string
@@ -532,10 +720,10 @@ collections:
         - label: Link label
           name: link_label
           widget: string
-          required: false
+          required: true
         - label: Link target
           name: link_target
           widget: string
-          hint: 'Page anchor without #. Built-ins: home, approach, contact; service group IDs can also
-            be used.'
-
+          hint: 'Section or service ID without #. Built-ins: home, services, approach,
+            questions, contact.'
+          required: true

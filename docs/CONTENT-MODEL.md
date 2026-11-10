@@ -1,54 +1,15 @@
-# BrightLink JSON content model
+# BrightLink content model
 
-## `public/data/site.json`
+`public/data/site.json` controls branding, logo, SEO, navigation, both hero columns, service ribbon, connected-home feature, process, local-area copy, FAQs, contact details, form messages and footer.
 
-Top-level objects:
+`public/data/services.json` controls service sections and cards. The approved launch has one `services` section with six detailed cards. Each has a stable ID, title, tagline, description, editable bullet list, icon, visibility switch, optional photo/alt text and inquiry link. Add, remove or reorder cards and bullets in Decap; numbering is automatic. Sections can also be added and reordered.
 
-- `schema_version`: internal format version, fixed at 1.
-- `seo`: title, description, language, optional canonical URL and social image.
-- `brand`: name, punctuation and subtitle.
-- `navigation`: ordered list of `{label, target}` anchor links.
-- `header_button`: anchor label and target.
-- `hero`: ordered headline lines with optional emphasized fragments, description, buttons and image/illustration content.
-- `service_strip`: ordered text entries.
-- `approach`: eyebrow, heading and ordered process-step headings/descriptions.
-- `contact`: content, phone, email, checklist and email-app outline.
-- `form`: enable switch, all visible labels/messages and public Turnstile site key.
-- `footer`: wordmark, description and back-to-top wording.
-- `ui`: interface/accessibility labels.
+Matching `*.schema.json` files power shared validation in the build, browser and CMS. `/admin/config.yml` exposes matching nested fields. Keep schema, validation and editor fields in sync when changing the model.
 
-## `public/data/services.json`
+Use anchor IDs without `#` in navigation targets. Supported built-ins are `home`, `services`, `approach`, `questions`, `contact`, plus existing section and card IDs. Keep the `services` section ID stable because the page uses it as the service overview and as a fallback when a featured card is removed. `service-options`, `handyman` and `electrical` remain as legacy anchors.
 
-```json
-{
-  "schema_version": 1,
-  "groups": [
-    {
-      "id": "services",
-      "eyebrow": "What we can help with",
-      "heading": "Small upgrades.\nA better everyday.",
-      "description": "Practical help for your home.",
-      "visible": true,
-      "items": [
-        {
-          "id": "services-tv",
-          "title": "TV mounting",
-          "description": "Secure TV installation and cable management.",
-          "icon": "tv",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "",
-          "link_target": "contact"
-        }
-      ]
-    }
-  ]
-}
-```
+Hero service tiles point to individual card IDs. If that card is hidden or removed, its tile links to the overall services section. Update the tile wording or target when replacing a featured service.
 
-Array order controls display order. Group IDs become section anchors. Item IDs become card anchors and must also be unique. No markup or scripts are permitted as executable content.
+Business content is escaped before rendering. Image values must be safe local paths or HTTPS URLs. Uploaded service photos require descriptive alt text. Icon names are selected from developer-owned SVG artwork, rather than accepting arbitrary markup.
 
-Icon choices: `tv`, `home`, `wifi`, `camera`, `audio`, `tools`, `shelf`, `window`, `door`, `paint`, `outlet`, `faucet`.
-
-CMS files are the source of truth. The build and browser share validators and renderer. Public JSON schemas describe structure; semantic validation also checks duplicate IDs, anchor references, dialing/email fields and photo alt text. Editable content is not stored in HTML.
+`public/assets/js/render.js` is the shared renderer for browser refreshes and build-generated HTML. Never edit business text directly in `templates/index.html` or `dist/index.html`. CSS, SVG artwork, security policies and OAuth handlers are developer-maintained source, separate from CMS content.

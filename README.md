@@ -269,3 +269,9 @@ The layout, responsive rules and SVG drawing definitions remain developer-owned 
 - GitHub OAuth: https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps
 - Turnstile: https://developers.cloudflare.com/turnstile/get-started/
 - Resend email API: https://resend.com/docs/api-reference/emails/send-email
+
+## Approved navy/cyan redesign
+
+This version implements the approved BrightLink preview, including its service-based hero (no imported hero illustration), optimized brand logo, six expanded service cards, connected-home feature, process, FAQs and contact area. Everything visitor-facing that contains business content is sourced from the CMS JSON. See `docs/CONTENT-MODEL.md` and `docs/OWNER-GUIDE.md` for the updated fields.
+
+Deployment settings remain: framework None, production branch `main`, build `npm run build`, output `dist`, root blank. The root `functions/` directory supplies the existing Pages OAuth/contact handlers. Keep the working production environment variables and GitHub OAuth App unchanged.

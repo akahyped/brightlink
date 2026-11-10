@@ -3,159 +3,165 @@
   "groups": [
     {
       "id": "services",
-      "eyebrow": "SMART HOME & TECHNOLOGY",
-      "heading": "Less tech frustration.\nMore connection.",
-      "description": "Installation and setup for the screens, networks, cameras and audio you use every day.",
+      "eyebrow": "The right help for your home",
+      "heading": "Big on the details.\nUseful in every room.",
+      "description": "Start with what you need. From a single installation to a whole list of improvements, here’s how I can help.",
       "visible": true,
       "items": [
         {
           "id": "services-tv",
-          "title": "TV mounting",
-          "description": "Secure TV installation, including Samsung Frame TVs, soundbar mounting and cable management for a clean finish.",
+          "title": "TV mounting & home audio",
+          "tagline": "A cleaner setup. A better movie night.",
+          "description": "From a Samsung Frame to your everyday living-room TV, get a thoughtfully positioned screen, organized cables and sound that fills the room.",
+          "bullets": [
+            {
+              "text": "TV and Samsung Frame mounting"
+            },
+            {
+              "text": "Soundbars, Sonos and amplifier setup"
+            },
+            {
+              "text": "In-ceiling and outdoor speakers"
+            },
+            {
+              "text": "Cable concealment and tidy connections"
+            }
+          ],
           "icon": "tv",
           "visible": true,
           "photo": "",
           "photo_alt": "",
-          "link_label": "",
+          "link_label": "Discuss this project",
           "link_target": "contact"
         },
         {
           "id": "services-home",
-          "title": "Smart home setup",
-          "description": "Video doorbells, smart locks, thermostats, lighting and connected devices, set up to work with your daily routine.",
+          "title": "Smart home installation",
+          "tagline": "Make your home work together.",
+          "description": "Get your devices installed, connected and explained, so everyday conveniences actually feel convenient.",
+          "bullets": [
+            {
+              "text": "Ring and Nest video doorbells"
+            },
+            {
+              "text": "Smart locks and connected deadbolts"
+            },
+            {
+              "text": "Thermostats and smart lighting"
+            },
+            {
+              "text": "Device setup, schedules and app walkthroughs"
+            }
+          ],
           "icon": "home",
           "visible": true,
           "photo": "",
           "photo_alt": "",
-          "link_label": "",
+          "link_label": "Discuss this project",
           "link_target": "contact"
         },
         {
           "id": "services-wifi",
-          "title": "Wi-Fi & networking",
-          "description": "Mesh Wi-Fi, access points, Ethernet cabling and wireless bridges to connect more of your home and property.",
+          "title": "Wi-Fi, networks & cameras",
+          "tagline": "Connection where you need it.",
+          "description": "Connect the rooms you use and keep an eye on your property with a network and camera setup built around your space.",
+          "bullets": [
+            {
+              "text": "Eero, Deco and Google mesh Wi-Fi"
+            },
+            {
+              "text": "Ethernet runs and access points"
+            },
+            {
+              "text": "Wireless links to detached buildings"
+            },
+            {
+              "text": "PoE cameras, NVRs and remote viewing"
+            }
+          ],
           "icon": "wifi",
           "visible": true,
           "photo": "",
           "photo_alt": "",
-          "link_label": "",
+          "link_label": "Discuss this project",
           "link_target": "contact"
         },
-        {
-          "id": "services-camera",
-          "title": "Security cameras",
-          "description": "PoE cameras, NVR systems and camera positioning, with help configuring recording and remote viewing.",
-          "icon": "camera",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "",
-          "link_target": "contact"
-        },
-        {
-          "id": "services-audio",
-          "title": "Home audio",
-          "description": "Sonos systems, in-ceiling and outdoor speakers, soundbars and audio wiring for the spaces you enjoy.",
-          "icon": "audio",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "",
-          "link_target": "contact"
-        }
-      ]
-    },
-    {
-      "id": "handyman",
-      "eyebrow": "HANDYMAN SERVICES",
-      "heading": "The to-do list?\nLet’s take care of it.",
-      "description": "Useful, practical help with the repairs and finishing touches that make your home feel complete.",
-      "visible": true,
-      "items": [
         {
           "id": "handyman-shelf",
-          "title": "Furniture assembly & mounting",
-          "description": "Assembly of IKEA and other flat-pack furniture, plus secure mounting of shelves, mirrors, artwork and other wall decor.",
-          "icon": "shelf",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "",
-          "link_target": "contact"
-        },
-        {
-          "id": "handyman-window",
-          "title": "Blinds, curtains & screens",
-          "description": "Installation of window blinds, curtain rods and other window treatments, plus window-screen repairs.",
-          "icon": "window",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "",
-          "link_target": "contact"
-        },
-        {
-          "id": "handyman-door",
-          "title": "Door hardware & smart locks",
-          "description": "Installation of door handles, locksets, deadbolts and smart door locks, with setup for connected models.",
-          "icon": "door",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "",
-          "link_target": "contact"
-        },
-        {
-          "id": "handyman-paint",
-          "title": "Drywall repair & painting",
-          "description": "Drywall patching, light wall repairs, interior touch-up painting and painting to refresh your space.",
-          "icon": "paint",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "",
-          "link_target": "contact"
-        },
-        {
-          "id": "handyman-faucet",
-          "title": "Minor plumbing & drains",
-          "description": "Drain snaking and clog clearing, plus kitchen, bathroom and shower fixture replacements, including faucets, showerheads, sinks and toilets.",
-          "icon": "faucet",
-          "visible": true,
-          "photo": "",
-          "photo_alt": "",
-          "link_label": "",
-          "link_target": "contact"
-        },
-        {
-          "id": "services-tools",
-          "title": "Home repairs & finishing touches",
-          "description": "Practical help with small home repairs, wall decor, finishing touches and the everyday items on your to-do list.",
+          "title": "Handyman & mounting",
+          "tagline": "Your to-do list, taken care of.",
+          "description": "Practical help for the small projects that make a big difference, from furniture assembly to the finishing touches on your walls.",
+          "bullets": [
+            {
+              "text": "Furniture assembly, including IKEA"
+            },
+            {
+              "text": "Shelves, artwork and mirror mounting"
+            },
+            {
+              "text": "Blinds, curtain rods and screen repairs"
+            },
+            {
+              "text": "Door handles, drywall patches and touch-up paint"
+            }
+          ],
           "icon": "tools",
           "visible": true,
           "photo": "",
           "photo_alt": "",
-          "link_label": "",
+          "link_label": "Discuss this project",
           "link_target": "contact"
-        }
-      ]
-    },
-    {
-      "id": "electrical",
-      "eyebrow": "MINOR ELECTRICAL WORK",
-      "heading": "Better lighting.\nConnections where you need them.",
-      "description": "Help with everyday electrical replacements and installations. Share the details of the existing setup so project suitability and any applicable requirements can be confirmed.",
-      "visible": true,
-      "items": [
+        },
         {
           "id": "handyman-outlet",
-          "title": "Outlets, fixtures & everyday upgrades",
-          "description": "Outlet and receptacle replacement, additional outlets, light-fixture and ceiling-fan replacement, and doorbell transformer installation. Send photos and equipment details to discuss the work.",
+          "title": "Minor electrical updates",
+          "tagline": "Better light. A more useful space.",
+          "description": "Replace worn fixtures and plan everyday upgrades. Share photos of your existing setup so the scope and applicable requirements can be confirmed.",
+          "bullets": [
+            {
+              "text": "Light-fixture and ceiling-fan replacement"
+            },
+            {
+              "text": "Outlet and receptacle replacement"
+            },
+            {
+              "text": "Additional outlets, where suitable"
+            },
+            {
+              "text": "Video-doorbell transformer installation"
+            }
+          ],
           "icon": "outlet",
           "visible": true,
           "photo": "",
           "photo_alt": "",
-          "link_label": "Discuss your electrical project ↗",
+          "link_label": "Discuss this project",
+          "link_target": "contact"
+        },
+        {
+          "id": "handyman-faucet",
+          "title": "Small plumbing jobs",
+          "tagline": "Everyday fixes, without the hassle.",
+          "description": "Help with straightforward fixture replacements and minor drain clogs. Send a photo and a description so we can discuss the right approach.",
+          "bullets": [
+            {
+              "text": "Faucet and showerhead replacement"
+            },
+            {
+              "text": "Sink and vanity fixture installation"
+            },
+            {
+              "text": "Minor clog clearing with a 25-foot auger"
+            },
+            {
+              "text": "Small kitchen and bathroom updates"
+            }
+          ],
+          "icon": "faucet",
+          "visible": true,
+          "photo": "",
+          "photo_alt": "",
+          "link_label": "Discuss this project",
           "link_target": "contact"
         }
       ]

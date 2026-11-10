@@ -1,21 +1,9 @@
-# Validation
+# Redesign verification
 
-## Completed
+The approved navy/cyan preview is implemented in the existing Cloudflare Pages project. Six expanded service cards replace the previous twelve short cards. The imported hero illustration is removed; the hero uses editable service links instead.
 
-- `npm run build`: passed.
-- 18 automated tests: content/JSON validation, CRUD and ordering of service cards, hidden content, safe rendering, internal navigation, optional fields, disabled-until-configured form, OAuth/PKCE/cookie checks, mocked GitHub editor permissions, mocked Turnstile and email-provider behavior.
-- All 12 service cards and all 12 SVG icons retained.
-- Source HTML has no hardcoded business content; generated HTML and runtime rendering both derive from JSON.
-- Browser inspection confirmed the green-and-cream BrightLink page, service/handyman content and contact details. Live GitHub login and actual email sending were not performed.
-- Contact button targets verified as `tel:+14407199436`, `sms:+14407199436`, and `brightlinkcle@gmail.com`.
-- Root package contains no real credentials or unrelated restaurant assets.
+Run `npm run build` to validate content and anchors, run the automated suite, and generate `dist/`. Tests cover content operations, visibility, escaping, invalid values, safe images, hero fallbacks after card removal, editable bullet lists, contact failure states and the established secure OAuth flow.
 
-## Required after deployment
+CMS fields were checked against both content schemas, including nested lists. The generated homepage contains full service content, canonical metadata, business/service JSON-LD, robots.txt and sitemap.xml. The existing www redirect and old service-path redirects remain. Google Ads initialization and security policy remain.
 
-- Add actual repository, OAuth origins, allowed editor and secrets.
-- Sign into `/admin/`, publish a reversible edit, and verify the new Cloudflare build.
-- Configure Turnstile and verified-domain email delivery; send a real test and confirm Gmail receipt.
-- Check on your actual phone and desktop browsers, including icon cards, contact layout and tap targets.
-- Verify domain/HTTPS/canonical URLs if migrating from Squarespace.
-
-“Production-ready” describes the implemented structure and safeguards. Live account configuration and acceptance tests still need to be completed before launch.
+OAuth handlers, contact backend and Cloudflare environment requirements are retained. Local preview does not verify a fresh GitHub login or real inquiry delivery. End-to-end CMS publication requires the deployed custom domain and an authorized editor session. Contact delivery remains unavailable until the existing server and public Turnstile settings are configured.

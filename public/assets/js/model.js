@@ -37,7 +37,7 @@ export function validateDocument(input, schema) {
 const slug = value => /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value);
 export function validateServices(input, schema) {
   const services = validateDocument(input, schema);
-  const ids = new Set(['home','approach','contact','contact-form','site-root','form-status']);
+  const ids = new Set(['home','approach','contact','contact-form','site-root','form-status','questions','service-options','handyman','electrical','navigation','selected-project']);
   for (const group of services.groups) {
     if (!slug(group.id) || ids.has(group.id) || !group.heading.trim()) throw new Error('Each service group needs a unique anchor ID and heading.');
     ids.add(group.id);
@@ -59,15 +59,14 @@ export function validateSite(input, schema) {
     const url = new URL(site.seo.canonical_url);
     if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash) throw new Error('Canonical must be a public HTTPS page URL without query or fragment.');
   }
-  if (site.hero.photo && (!safePhoto(site.hero.photo) || !site.hero.photo_alt.trim())) throw new Error('Hero photos need safe URLs and alt text.');
+  if (site.brand.logo && (!safePhoto(site.brand.logo) || !site.brand.logo_alt.trim())) throw new Error('Brand logos need safe URLs and alt text.');
   if (site.seo.social_image && !safePhoto(site.seo.social_image)) throw new Error('Invalid social image URL.');
   if (site.form.turnstile_site_key && !/^[\w-]{10,100}$/.test(site.form.turnstile_site_key)) throw new Error('Invalid public Turnstile site key.');
   return site;
 }
 export function validateAnchors(site, services) {
-  const anchors = new Set(['home','approach','contact','service-options',...services.groups.map(group => group.id)]);
-  for (const target of [...site.navigation.map(link=>link.target),...(site.experience?.categories||[]).map(item=>item.target),site.header_button.target,site.hero.primary_target,site.hero.secondary_target,...services.groups.flatMap(group=>group.items.filter(item=>item.link_label).map(item=>item.link_target))]) {
-    if (!anchors.has(target)) throw new Error(`Unknown navigation anchor: ${target}`);
-  }
+ const anchors=new Set(['home','approach','contact','service-options','questions','handyman','electrical',...services.groups.map(g=>g.id),...services.groups.flatMap(g=>g.items.map(i=>i.id))]);
+ for(const target of [...site.navigation.map(i=>i.target),site.hero_showcase.link_target,site.header_button.target,site.hero.primary_target,site.hero.secondary_target,...services.groups.flatMap(g=>g.items.filter(i=>i.link_label).map(i=>i.link_target))]) {
+  if(!anchors.has(target)) throw new Error(`Unknown navigation anchor: ${target}`);
+ }
 }
-
